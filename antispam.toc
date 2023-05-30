@@ -1,0 +1,6 @@
+## Interface: 11200
+## Title: antispam
+## Author: Shagu
+## Notes: removes annoying messages
+## Version: 1.0
+antispam.lua
