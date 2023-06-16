@@ -1,4 +1,3 @@
-local debug = false
 local msg
 
 local events = {
@@ -20,11 +19,6 @@ local prepare = function(msg)
   return msg
 end
 
-local debug = function(msg)
-  if not debug then return end
-  DEFAULT_CHAT_FRAME:AddMessage("|cff33ffccBLOCKED|r"..msg)
-end
-
 local _ChatFrame_OnEvent = ChatFrame_OnEvent
 function ChatFrame_OnEvent(event)
   if events[event] and arg2 and arg1 then
@@ -40,7 +34,6 @@ function ChatFrame_OnEvent(event)
       end
 
       if matched == true then
-        debug(msg)
         return true
       end
     end
