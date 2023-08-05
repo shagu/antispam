@@ -24,8 +24,11 @@ end
 local _ChatFrame_OnEvent = ChatFrame_OnEvent
 function ChatFrame_OnEvent(event)
   if events[event] and arg2 and arg1 then
-    msg = prepare(arg1)
+    -- Can't block all moo's because of "moonfire" and alike.
+    -- So only filter every message that ends with a "moo".
+    if string.find(string.lower(arg1), "moo$") then return end
 
+    msg = prepare(arg1)
     for _, data in pairs(blocks) do
       local matched = true
 
