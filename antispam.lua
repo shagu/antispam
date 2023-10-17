@@ -40,7 +40,11 @@ function ChatFrame_OnEvent(event)
       end
 
       if matched == true then
-        return true
+        if SPAM == true then
+          arg1 = "|cff33ffcc[SPAM] |r"..arg1
+        else
+          return true
+        end
       end
     end
   end
