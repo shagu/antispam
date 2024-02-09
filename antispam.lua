@@ -13,6 +13,7 @@ local blocks = {
   { "nost", "100", "com" },
   { "selling", "gold", "google" },
   { "gold", "account", "nost" },
+  { "buy", "gold", "need", "mana" },
   { "mooo" },
 }
 
